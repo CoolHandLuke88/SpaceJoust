@@ -27,7 +27,14 @@
 #import "CCViewController.h"
 
 
+@interface CCViewController ()
+@property (strong, nonatomic) UIButton *button;
+@property (strong, nonatomic) CCScene *scene;
+@property (strong, nonatomic) CCLayer *layer;
+@end
+
 @implementation CCViewController
+
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
@@ -40,8 +47,39 @@
 }
 
 -(void)setUp{
-    self.helloWorlLayer = [[HelloWorldLayer alloc] init];
+    
+// self.scene = [CCScene node];
+////    HelloWorldLayer *layer = [HelloWorldLayer node];
+////    [scene addChild:layer];
+//    
+//    self.layer = [CCLayer node];
+//    
+//    [self.scene addChild:self.layer];
+//    
+//    // create and initialize a Label
+//    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+//    
+//    // ask director for the window size
+//    
+//	
+//    // position the label on the center of the screen
+//    label.position =  ccp( 20 /2 , 20/2 );
+//    
+//    // add the label as a child to this Layer
+//    [self.layer addChild: label];
+    
+ 
 }
+
+//+(id)scene{
+//    CCScene *scene = [CCScene node];
+//    HelloWorldLayer *layer = [HelloWorldLayer node];
+//    [scene addChild:layer];
+//    
+//    return scene;
+//}
+
+
 
 #pragma mark - View lifecycle
 
@@ -60,14 +98,26 @@
 
     director.delegate = self;
     
+    CCScene *tempScene = [HelloWorldLayer scene];
+    [director runWithScene:tempScene];
+    self.layer = [tempScene.children objectAtIndex:0];
+    
     // Add the director as a child view controller.
     [self addChildViewController:director];
     
     // Add the director's OpenGL view, and send it to the back of the view hierarchy so we can place UIKit elements on top of it.
     [self.view addSubview:director.view];
     [self.view sendSubviewToBack:director.view];
-//    [self.view addSubview:self.helloWorlLayer];
-//    [director.view addSubview:self.helloWorlLayer];
+    
+//    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    self.button.frame = CGRectMake(20, 20, 200, 44);
+//    [self.button setTitle:@"I exist" forState:UIControlStateNormal];
+//    [self.view addSubview:self.button];
+    
+    
+
+    
+    
     
     // Ensure we fulfill all of our view controller containment requirements.
     [director didMoveToParentViewController:self];
