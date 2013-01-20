@@ -137,6 +137,9 @@
 		3A233FF416AB5656004A2CB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A233FF316AB5656004A2CB9 /* AppDelegate.m */; };
 		3A233FF716AB5656004A2CB9 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A233FF616AB5656004A2CB9 /* HelloWorldLayer.m */; };
 		3A233FFA16AB5656004A2CB9 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A233FF916AB5656004A2CB9 /* IntroLayer.m */; };
+		7796DC7916AB69A6000D9B14 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7796DC7816AB69A6000D9B14 /* CCViewController.m */; };
+		7796DC7C16AB69F7000D9B14 /* iPhoneStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7796DC7B16AB69F7000D9B14 /* iPhoneStoryBoard.storyboard */; };
+		7796DC7E16AB6A05000D9B14 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7796DC7D16AB6A05000D9B14 /* iPadStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -413,6 +416,10 @@
 		3A233FF616AB5656004A2CB9 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		3A233FF816AB5656004A2CB9 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		3A233FF916AB5656004A2CB9 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		7796DC7716AB69A6000D9B14 /* CCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		7796DC7816AB69A6000D9B14 /* CCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		7796DC7B16AB69F7000D9B14 /* iPhoneStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneStoryBoard.storyboard; sourceTree = "<group>"; };
+		7796DC7D16AB6A05000D9B14 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +478,10 @@
 		3A233E6B16AB5653004A2CB9 /* SpaceJoust */ = {
 			isa = PBXGroup;
 			children = (
+				7796DC7A16AB69C5000D9B14 /* iPad */,
+				7796DC7216AB6910000D9B14 /* iPhone */,
+				7796D7D316AB5ACA000D9B14 /* ViewControllers */,
+				7796D7CE16AB5A83000D9B14 /* StoryBoard */,
 				3A233FF216AB5656004A2CB9 /* AppDelegate.h */,
 				3A233FF316AB5656004A2CB9 /* AppDelegate.m */,
 				3A233FF516AB5656004A2CB9 /* HelloWorldLayer.h */,
@@ -858,6 +869,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7796D7CE16AB5A83000D9B14 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		7796D7D316AB5ACA000D9B14 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7796DC7716AB69A6000D9B14 /* CCViewController.h */,
+				7796DC7816AB69A6000D9B14 /* CCViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7796DC7216AB6910000D9B14 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				7796DC7B16AB69F7000D9B14 /* iPhoneStoryBoard.storyboard */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		7796DC7A16AB69C5000D9B14 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				7796DC7D16AB6A05000D9B14 /* iPadStoryboard.storyboard */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -921,6 +964,8 @@
 				3A233E8016AB5653004A2CB9 /* Icon@2x.png in Resources */,
 				3A233E8316AB5653004A2CB9 /* iTunesArtwork in Resources */,
 				3A233FD216AB5656004A2CB9 /* ChangeLog in Resources */,
+				7796DC7C16AB69F7000D9B14 /* iPhoneStoryBoard.storyboard in Resources */,
+				7796DC7E16AB6A05000D9B14 /* iPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,6 +1085,7 @@
 				3A233FF416AB5656004A2CB9 /* AppDelegate.m in Sources */,
 				3A233FF716AB5656004A2CB9 /* HelloWorldLayer.m in Sources */,
 				3A233FFA16AB5656004A2CB9 /* IntroLayer.m in Sources */,
+				7796DC7916AB69A6000D9B14 /* CCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,7 +1107,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1080,7 +1126,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1096,11 +1142,13 @@
 				GCC_PREFIX_HEADER = SpaceJoust/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"SpaceJoust/libs/kazmath/include\"";
 				INFOPLIST_FILE = SpaceJoust/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1114,11 +1162,13 @@
 				GCC_PREFIX_HEADER = SpaceJoust/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"SpaceJoust/libs/kazmath/include\"";
 				INFOPLIST_FILE = SpaceJoust/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1143,6 +1193,7 @@
 				3A233FFF16AB5656004A2CB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
